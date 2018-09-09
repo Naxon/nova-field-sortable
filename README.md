@@ -7,7 +7,7 @@
 
 This field adds reordering functionality to your resource's index using the awesome [eloquent-sortable](https://github.com/spatie/eloquent-sortable) package by the great people of [Spatie](https://spatie.be).
 
-![screenshot](./docs/screenshot.png)
+![screenshot](https://github.com/Naxon/nova-field-sortable/raw/master/docs/screenshot.png)
 
 ## Requrements
 
