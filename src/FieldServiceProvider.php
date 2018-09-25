@@ -43,6 +43,7 @@ class FieldServiceProvider extends ServiceProvider
     {
         Route::domain(config('nova.domain', null))
             ->middleware(config('nova.middleware', []))
+            ->prefix('/nova-vendor/naxon/nova-field-sortable')
             ->group(__DIR__ . '/Http/Routes/api.php');
     }
 }

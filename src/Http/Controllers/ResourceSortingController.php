@@ -20,7 +20,7 @@ class ResourceSortingController extends Controller
         $model = $request->findModelQuery()->firstOrFail();
 
         if (!$model instanceof Sortable) {
-            return response('', 500);
+            return response(sprintf('Model %s is not sortable', get_class($model)), 500);
         }
 
         if ($direction == 'up') {
