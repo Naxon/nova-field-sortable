@@ -4,7 +4,6 @@ namespace Naxon\NovaFieldSortable\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Naxon\NovaFieldSortable\Http\Requests\ReorderResourceRequest;
-use Spatie\EloquentSortable\Sortable;
 
 class ResourceSortingController extends Controller
 {
@@ -18,6 +17,10 @@ class ResourceSortingController extends Controller
         }
 
         $model = $request->findModelQuery()->firstOrFail();
+
+        if (!method_exists($model, 'moveOrderUp') || !method_exists($model, 'moveOrderDown')) {
+            return response(__('Missing sorting methods on model :model', ['model' => get_class($model)]), 500);
+        }
 
         if ($direction == 'up') {
             $model->moveOrderUp();
