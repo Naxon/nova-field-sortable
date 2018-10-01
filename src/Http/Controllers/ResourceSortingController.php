@@ -2,7 +2,7 @@
 
 namespace Naxon\NovaFieldSortable\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Naxon\NovaFieldSortable\Http\Requests\ReorderResourceRequest;
 
 class ResourceSortingController extends Controller
