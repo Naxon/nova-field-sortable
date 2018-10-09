@@ -42,12 +42,6 @@
                     {direction: direction}
                 );
             },
-
-            createFormData(direction) {
-                return _.tap(new FormData(), formData => {
-                    formData.append('direction', direction);
-                });
-            },
         }
     }
 </script>
