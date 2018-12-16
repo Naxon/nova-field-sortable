@@ -30,7 +30,7 @@
                     this.$router.go(this.$router.currentRoute);
                 } catch (error) {
                     this.$toasted.show(
-                        this.__('An error occured while trying to reorder the resource.'),
+                        this.__('An error occurred while trying to reorder the resource.'),
                         {type: 'error'}
                     );
                 }
