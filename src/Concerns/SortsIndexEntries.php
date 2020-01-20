@@ -19,7 +19,7 @@ trait SortsIndexEntries
         $query->when(empty($request->get('orderBy')), function (Builder $q) {
             $q->getQuery()->orders = [];
 
-            return $q->orderBy(static::$defaultSortField);
+            return $q->orderBy(static::$defaultSortField ?? 'order_column');
         });
 
         return $query;
