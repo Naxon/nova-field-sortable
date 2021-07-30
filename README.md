@@ -58,8 +58,7 @@ class Page extends Resource
             
             Text::make('Title'),
             
-            Sortable::make('Order', 'id')
-                ->onlyOnIndex(),
+            Sortable::make('Order', 'id'),
         ];
     }
 }
