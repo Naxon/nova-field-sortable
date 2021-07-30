@@ -24,9 +24,8 @@ composer require naxon/nova-field-sortable
 ## Usage
 
 1. Follow the [usage instructions](https://github.com/spatie/eloquent-sortable#usage) on the eloquent-sortable repository to make your model sortable.
-2. Use the `Naxon\NovaFieldSortable\Concerns\SortsIndexEntries` trait in your Nova Resource.
-3. Add a public static property called `$defaultSortField` to your resource, containing your sorting column (I recomment adding it in your main `app/Nova/Resource.php` file).
-4. Add the `Naxon\NovaFieldSortable\Sortable` field to your Nova Resource `fields` method, using a label and your primary key column.
+1. Use the `Naxon\NovaFieldSortable\Concerns\SortsIndexEntries` trait in your Nova Resource.
+1. Add the `Naxon\NovaFieldSortable\Sortable` field to your Nova Resource `fields` method, using a label and your primary key column.
 
 ### Example
 
@@ -45,8 +44,6 @@ use Naxon\NovaFieldSortable\Sortable;
 class Page extends Resource
 {
     use SortsIndexEntries;
-    
-    public static $defaultSortField = 'sort_order';
     
     /**
      * Get the fields displayed by the resource.
